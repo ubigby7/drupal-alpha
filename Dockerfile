@@ -7,5 +7,8 @@ COPY settings.php /var/www/html/sites/default/settings.php
 RUN chown www-data:www-data /var/www/html/sites/default/settings.php && \
     chmod 444 /var/www/html/sites/default/settings.php
 
+RUN composer require drush/drush --no-interaction
+
 RUN composer require drupal/s3fs --no-interaction
+
 
