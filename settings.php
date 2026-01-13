@@ -904,4 +904,16 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_Qe1rNPZYCuP3UR5W6mYGBi4xD8bpin4ARurErOx90CheMzbOO_j9tPXRe_LumF11xBoJmxR5tg/sync';
+#
+#
+$settings['config_sync_directory'] = 'sites/default/files/config/sync';
+#
+# configuration for s3fs
+$config['s3fs.settings']['bucket'] = getenv('BUCKET_NAME');
+$config['s3fs.settings']['region'] = getenv('BUCKET_REGION');
+
+$settings['s3fs.use_s3_for_public'] = TRUE;
+$settings['s3fs.use_s3_for_private'] = FALSE;
+
+$config['s3fs.settings']['use_https'] = TRUE;
+
