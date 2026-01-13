@@ -916,4 +916,4 @@ $settings['s3fs.use_s3_for_public'] = TRUE;
 $settings['s3fs.use_s3_for_private'] = FALSE;
 
 $config['s3fs.settings']['use_https'] = TRUE;
-
+$config['s3fs.settings']['canned_acl'] = '';
