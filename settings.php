@@ -915,6 +915,7 @@ $config['s3fs.settings']['use_https'] = TRUE;
 
 $settings['s3fs.use_s3_for_public'] = TRUE;
 $settings['s3fs.use_s3_for_private'] = FALSE;
+$settings['s3fs.upload_as_private'] = TRUE;
 
 $config['s3fs.settings']['disable_acl'] = TRUE;
 $config['s3fs.settings']['canned_acl'] = FALSE;
