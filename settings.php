@@ -1,5 +1,21 @@
 <?php
 
+
+# configuration for s3fs
+$settings['s3fs.use_instance_profile'] = FALSE;
+$settings['config']['s3fs.settings']['use_instance_profile'] = FALSE;
+
+$config['s3fs.settings']['bucket'] = getenv('BUCKET_NAME');
+$config['s3fs.settings']['region'] = getenv('BUCKET_REGION');
+$config['s3fs.settings']['use_https'] = TRUE;
+
+$settings['s3fs.use_s3_for_public'] = TRUE;
+$settings['s3fs.use_s3_for_private'] = FALSE;
+$settings['s3fs.upload_as_private'] = TRUE;
+
+$config['s3fs.settings']['disable_acl'] = TRUE;
+$config['s3fs.settings']['canned_acl'] = FALSE;
+
 // phpcs:ignoreFile
 
 /**
@@ -908,17 +924,6 @@ $databases['default']['default'] = array (
 #
 $settings['config_sync_directory'] = 'sites/default/files/config/sync';
 #
-# configuration for s3fs
-$config['s3fs.settings']['bucket'] = getenv('BUCKET_NAME');
-$config['s3fs.settings']['region'] = getenv('BUCKET_REGION');
-$config['s3fs.settings']['use_https'] = TRUE;
 
-$settings['s3fs.use_s3_for_public'] = TRUE;
-$settings['s3fs.use_s3_for_private'] = FALSE;
-$settings['s3fs.upload_as_private'] = TRUE;
 
-$config['s3fs.settings']['disable_acl'] = TRUE;
-$config['s3fs.settings']['canned_acl'] = FALSE;
 
-$settings['s3fs.use_instance_profile'] = FALSE;
-$settings['config']['s3fs.settings']['use_instance_profile'] = FALSE;
