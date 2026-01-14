@@ -919,4 +919,4 @@ $settings['s3fs.upload_as_private'] = TRUE;
 
 $config['s3fs.settings']['disable_acl'] = TRUE;
 $config['s3fs.settings']['canned_acl'] = FALSE;
-$settings['s3fs.use_instance_profile'] = FALSE;
+$settings['s3fs.use_instance_profile'] = TRUE;
