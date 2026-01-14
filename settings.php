@@ -2,9 +2,6 @@
 
 
 # configuration for s3fs
-$settings['s3fs.use_instance_profile'] = FALSE;
-$settings['config']['s3fs.settings']['use_instance_profile'] = FALSE;
-
 $config['s3fs.settings']['bucket'] = getenv('BUCKET_NAME');
 $config['s3fs.settings']['region'] = getenv('BUCKET_REGION');
 $config['s3fs.settings']['use_https'] = TRUE;
