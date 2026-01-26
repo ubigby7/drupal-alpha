@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t docker/drupal-beta ."
+                sh "docker build -t docker/drupal-beta:stable ."
             }
         }
         
@@ -34,3 +34,4 @@ pipeline {
     }
 
 }
+
