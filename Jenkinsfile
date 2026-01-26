@@ -22,14 +22,15 @@ pipeline {
         
         stage('Tag Docker Image') {
             steps {
-                sh "docker tag docker/drupal-beta:latest 554269191227.dkr.ecr.eu-west-2.amazonaws.com/docker/drupal-beta:latest"
+                sh "docker tag docker/drupal-beta:stable 554269191227.dkr.ecr.eu-west-2.amazonaws.com/docker/drupal-beta:stable"
             }
         }
 
         stage('Push Docker Image to ECR') {
             steps {
-                sh "docker push 554269191227.dkr.ecr.eu-west-2.amazonaws.com/docker/drupal-beta:latest"
+                sh "docker push 554269191227.dkr.ecr.eu-west-2.amazonaws.com/docker/drupal-beta:stable"
             }
         }
     }
+
 }
